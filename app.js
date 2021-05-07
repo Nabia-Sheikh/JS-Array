@@ -207,9 +207,9 @@ function p9f() {
   var newColorName = prompt("Enter the color Name you want to add");
 
   colorNamesf.splice(indexColor, 0, newColorName);
-  document.getElementById("partE").innerHTML += colorNamesf;
-  document.getElementById("partE").innerHTML += "<hr>";
-  document.getElementById("btn9e").onclick = "";
+  document.getElementById("partF").innerHTML += colorNamesf;
+  document.getElementById("partF").innerHTML += "<hr>";
+  document.getElementById("btn9f").onclick = "";
 }
 
 function p9g() {
@@ -309,25 +309,20 @@ function q15() {
 }
 
 // user-defined table
-function ttable() {
-  var num = parseInt(prompt("Enter Number", "5")); 
-  var i = 0 ;
-  document.write('<table border="0" cellspacing="5">');
-  for (i = 1; i <= 10; i++) {
-    document.write(
-      "<tr><td>" + num + " x " + i + " = " + num * i + "</td></tr>"
-    );
+function userTable() {
+  var num = parseInt(prompt("Enter Table Number"));
+  for (var i = 1; i <= 10; i++) {
+    document.getElementById("userTable").innerHTML +=
+      num + " x " + i + " = " + num * i + "<br>";
   }
+  document.getElementById("userTableBtn").onclick = "";
 }
 
 // Hard coded table
-function table() {
-var num = parseInt(2); 
-var i = 0;
-document.write('<table border="0" cellspacing="5">');
-for (i = 1; i <= 10; i++) {
-  document.write(
-    "<tr><td>" + num + " x " + i + " = " + num * i + "</td></tr>"
-  );
-}
+function hardTable() {
+  for (var i = 1; i <= 10; i++) {
+    document.getElementById("hardTable").innerHTML +=
+      "2 x " + i + " = " + 2 * i + "<br>";
+  }
+  document.getElementById("tableBtn").onclick = "";
 }
